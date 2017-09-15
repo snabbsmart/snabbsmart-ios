@@ -1,14 +1,6 @@
-//
-//  ViewController.swift
-//  Snabbsmart
-//
-//  Created by Alexander Ross on 2017-09-15.
-//  Copyright © 2017 Alexander Ross. All rights reserved.
-//
-
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController, StoryboardInitializable {
 
     override func viewDidLoad() {
         super.viewDidLoad()

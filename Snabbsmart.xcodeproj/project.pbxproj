@@ -14,6 +14,7 @@
 		913708881F6C3BC200659DD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 913708861F6C3BC200659DD7 /* LaunchScreen.storyboard */; };
 		913708931F6C3BC200659DD7 /* SnabbsmartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913708921F6C3BC200659DD7 /* SnabbsmartTests.swift */; };
 		9137089E1F6C3BC200659DD7 /* SnabbsmartUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9137089D1F6C3BC200659DD7 /* SnabbsmartUITests.swift */; };
+		913708AC1F6C3C9F00659DD7 /* StoryboardInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913708AB1F6C3C9F00659DD7 /* StoryboardInitializable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		913708991F6C3BC200659DD7 /* SnabbsmartUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnabbsmartUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9137089D1F6C3BC200659DD7 /* SnabbsmartUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnabbsmartUITests.swift; sourceTree = "<group>"; };
 		9137089F1F6C3BC200659DD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		913708AB1F6C3C9F00659DD7 /* StoryboardInitializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardInitializable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				9137087D1F6C3BC200659DD7 /* AppDelegate.swift */,
+				913708AB1F6C3C9F00659DD7 /* StoryboardInitializable.swift */,
 				9137087F1F6C3BC200659DD7 /* ViewController.swift */,
 				913708811F6C3BC200659DD7 /* Main.storyboard */,
 				913708841F6C3BC200659DD7 /* Assets.xcassets */,
@@ -264,6 +267,7 @@
 			files = (
 				913708801F6C3BC200659DD7 /* ViewController.swift in Sources */,
 				9137087E1F6C3BC200659DD7 /* AppDelegate.swift in Sources */,
+				913708AC1F6C3C9F00659DD7 /* StoryboardInitializable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +520,7 @@
 				913708A41F6C3BC200659DD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		913708A51F6C3BC200659DD7 /* Build configuration list for PBXNativeTarget "SnabbsmartTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +529,7 @@
 				913708A71F6C3BC200659DD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		913708A81F6C3BC200659DD7 /* Build configuration list for PBXNativeTarget "SnabbsmartUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +538,7 @@
 				913708AA1F6C3BC200659DD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
