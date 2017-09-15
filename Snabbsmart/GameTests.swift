@@ -54,4 +54,31 @@ class GameTests: XCTestCase {
         XCTAssertEqual(2094, game.currentPlayer.gameScore)
         XCTAssertEqual(710, game.currentPlayer.questionScore)
     }
+
+    class MockActionCableChannel: ActionCableChannel {
+        var actionNameCalled = ""
+        var actionMessageSent: [String: Any]? = nil
+
+        func action(_ action: String, _ messsage: [String : Any]) {
+            self.actionNameCalled = action
+            self.actionMessageSent = messsage
+        }
+    }
+
+    func testAnswerQuestion() {
+        let channel = MockActionCableChannel()
+        gameHandler.actionCableChannel = channel
+
+        let json = [
+            "answerNumber": 3
+        ]
+
+        let data = try! JSONSerialization.data(withJSONObject: json, options: [])
+
+        _ = gameHandler.answerQuestion(in: game, withData: data)
+
+        XCTAssertEqual("answerQuestion", channel.actionNameCalled)
+        XCTAssertEqual(3, channel.actionMessageSent!["answerNumber"] as! Int)
+
+    }
 }

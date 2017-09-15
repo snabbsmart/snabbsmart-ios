@@ -14,8 +14,21 @@ struct Game {
     var currentQuestionNumber: Int = 1
 }
 
+protocol ActionCableChannel {
+    var onReceive: (_ json : Any?, _ error : Error?) -> Void { get set }
+    func action(_ action: String, _ messsage: [String: Any])
+}
+
 class GameHandler {
     static let shared = GameHandler()
+
+    var actionCableChannel: ActionCableChannel?
+
+    func startChannelObserver() {
+        actionCableChannel?.onReceive = { json, error in
+
+        }
+    }
 
     func startQuestion(in game: Game, withData data: Data) -> Game {
         return handleEvent(in: game, withData: data)
@@ -27,6 +40,12 @@ class GameHandler {
 
     func endQuestion(in game: Game, withData data: Data) -> Game {
         return handleEvent(in: game, withData: data)
+    }
+
+    func answerQuestion(in game: Game, withData data: Data) -> Game {
+        let json = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+        actionCableChannel?.action("answerQuestion", json)
+        return game
     }
 
     fileprivate func handleEvent(in game: Game, withData data: Data) -> Game {
