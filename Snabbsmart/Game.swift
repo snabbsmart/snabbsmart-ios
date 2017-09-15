@@ -10,4 +10,8 @@ class Game {
         self.questionCount = questionCount
         self.token = token
     }
+
+    func startQuestion(withData: Data) -> Int {
+        return 17
+    }
 }
