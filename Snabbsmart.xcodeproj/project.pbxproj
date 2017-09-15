@@ -15,6 +15,13 @@
 		913708931F6C3BC200659DD7 /* SnabbsmartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913708921F6C3BC200659DD7 /* SnabbsmartTests.swift */; };
 		9137089E1F6C3BC200659DD7 /* SnabbsmartUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9137089D1F6C3BC200659DD7 /* SnabbsmartUITests.swift */; };
 		913708AC1F6C3C9F00659DD7 /* StoryboardInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913708AB1F6C3C9F00659DD7 /* StoryboardInitializable.swift */; };
+		9184D6AB1F6C593B00A6BE02 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9137087F1F6C3BC200659DD7 /* ViewController.swift */; };
+		9184D6AC1F6C595000A6BE02 /* StoryboardInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913708AB1F6C3C9F00659DD7 /* StoryboardInitializable.swift */; };
+		91882ACF1F6C569D00DBFAA9 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91882ACE1F6C569D00DBFAA9 /* AppCoordinator.swift */; };
+		91882AD01F6C569D00DBFAA9 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91882ACE1F6C569D00DBFAA9 /* AppCoordinator.swift */; };
+		91882AD21F6C56BA00DBFAA9 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91882AD11F6C56BA00DBFAA9 /* Game.swift */; };
+		91882AD31F6C56BA00DBFAA9 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91882AD11F6C56BA00DBFAA9 /* Game.swift */; };
+		91882AD51F6C56CA00DBFAA9 /* GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91882AD41F6C56CA00DBFAA9 /* GameTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,9 @@
 		9137089D1F6C3BC200659DD7 /* SnabbsmartUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnabbsmartUITests.swift; sourceTree = "<group>"; };
 		9137089F1F6C3BC200659DD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		913708AB1F6C3C9F00659DD7 /* StoryboardInitializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardInitializable.swift; sourceTree = "<group>"; };
+		91882ACE1F6C569D00DBFAA9 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		91882AD11F6C56BA00DBFAA9 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		91882AD41F6C56CA00DBFAA9 /* GameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameTests.swift; path = ../Snabbsmart/GameTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				9137087D1F6C3BC200659DD7 /* AppDelegate.swift */,
+				91882ACE1F6C569D00DBFAA9 /* AppCoordinator.swift */,
+				91882AD11F6C56BA00DBFAA9 /* Game.swift */,
 				913708AB1F6C3C9F00659DD7 /* StoryboardInitializable.swift */,
 				9137087F1F6C3BC200659DD7 /* ViewController.swift */,
 				913708811F6C3BC200659DD7 /* Main.storyboard */,
@@ -113,6 +125,7 @@
 		913708911F6C3BC200659DD7 /* SnabbsmartTests */ = {
 			isa = PBXGroup;
 			children = (
+				91882AD41F6C56CA00DBFAA9 /* GameTests.swift */,
 				913708921F6C3BC200659DD7 /* SnabbsmartTests.swift */,
 				913708941F6C3BC200659DD7 /* Info.plist */,
 			);
@@ -265,6 +278,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91882ACF1F6C569D00DBFAA9 /* AppCoordinator.swift in Sources */,
+				91882AD21F6C56BA00DBFAA9 /* Game.swift in Sources */,
 				913708801F6C3BC200659DD7 /* ViewController.swift in Sources */,
 				9137087E1F6C3BC200659DD7 /* AppDelegate.swift in Sources */,
 				913708AC1F6C3C9F00659DD7 /* StoryboardInitializable.swift in Sources */,
@@ -275,7 +290,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9184D6AB1F6C593B00A6BE02 /* ViewController.swift in Sources */,
+				91882AD01F6C569D00DBFAA9 /* AppCoordinator.swift in Sources */,
+				9184D6AC1F6C595000A6BE02 /* StoryboardInitializable.swift in Sources */,
+				91882AD31F6C56BA00DBFAA9 /* Game.swift in Sources */,
 				913708931F6C3BC200659DD7 /* SnabbsmartTests.swift in Sources */,
+				91882AD51F6C56CA00DBFAA9 /* GameTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
