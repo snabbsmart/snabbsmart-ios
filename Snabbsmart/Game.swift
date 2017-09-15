@@ -11,7 +11,8 @@ class Game {
         self.token = token
     }
 
-    func startQuestion(withData: Data) -> Int {
-        return 17
+    func startQuestion(withData data: Data) -> Int {
+        let json = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+        return json["questionNumber"] as! Int
     }
 }
