@@ -15,7 +15,7 @@ struct Game {
 }
 
 protocol ActionCableChannel {
-    var onReceive: (_ json : Any?, _ error : Error?) -> Void { get set }
+    var onReceive: ((_ json : Any?, _ error : Error?) -> Void)? { get set }
     func action(_ action: String, _ messsage: [String: Any])
 }
 
@@ -24,9 +24,14 @@ class GameHandler {
 
     var actionCableChannel: ActionCableChannel?
 
-    func startChannelObserver() {
-        actionCableChannel?.onReceive = { json, error in
+    var onStartQuestion: ((Game) -> Void)?
 
+    func startChannelObserver(forGame game: Game) {
+        actionCableChannel?.onReceive = { json, error in
+            let jsonDict = json as! [String: Any]
+            let data = try! JSONSerialization.data(withJSONObject: jsonDict["data"] as! [String: Any], options: [])
+            let game = self.startQuestion(in: game, withData: data)
+            self.onStartQuestion?(game)
         }
     }
 

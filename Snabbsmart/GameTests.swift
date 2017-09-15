@@ -63,6 +63,8 @@ class GameTests: XCTestCase {
             self.actionNameCalled = action
             self.actionMessageSent = messsage
         }
+
+        var onReceive: ((Any?, Error?) -> Void)?
     }
 
     func testAnswerQuestion() {
@@ -80,5 +82,24 @@ class GameTests: XCTestCase {
         XCTAssertEqual("answerQuestion", channel.actionNameCalled)
         XCTAssertEqual(3, channel.actionMessageSent!["answerNumber"] as! Int)
 
+    }
+
+    func testStartChannelObserver_whenStartQuestion_willUpdateCurrentQuestionNumber() {
+        let channel = MockActionCableChannel()
+        gameHandler.actionCableChannel = channel
+        gameHandler.startChannelObserver(forGame: game!)
+        let json: [String : Any] = [
+            "eventname": "startQuestion",
+            "data": [
+                "questionNumber": 8
+            ]
+        ]
+        var currentQuestionNumber = 0
+        gameHandler.onStartQuestion = { game in
+            currentQuestionNumber = game.currentQuestionNumber
+        }
+        channel.onReceive!(json, nil)
+
+        XCTAssertEqual(8, currentQuestionNumber)
     }
 }
